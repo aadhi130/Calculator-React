@@ -26,9 +26,11 @@ class Calc extends Component{
         })
       }
       else if(val==='<-'){
-        let str = this.state.inp.length
+        //to clear individual input characters
+        let x= this.state.inp.substring(0,this.state.inp.length-1)
+        console.log(`x=`,x)
         this.setState({
-            inp:str
+          inp: x
         })
       }
       else if(val==="="){
